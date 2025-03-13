@@ -1,0 +1,18 @@
+### Production Server Profile ###
+spring:
+  profiles:
+    active: prod
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${mysql_prod_url}
+    username: ${mysql_username}
+    password: ${mysql_password}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect

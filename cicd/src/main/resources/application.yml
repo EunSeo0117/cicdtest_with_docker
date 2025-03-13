@@ -1,0 +1,36 @@
+### Common Profile ###
+spring:
+  application:
+    name: ieoso
+
+  # Default Profile
+  profiles:
+    active: local  # ?? ????? local? ??
+
+  # Port
+  server:
+    port: 8084
+
+  # FileSize
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  # Aws S3
+  aws:
+    s3:
+      bucket-name: itdaawsbucket
+      region: ap-northeast-2
+
+  # Jwt SecretKey
+  jwt:
+    secret: ${jwt_key}
+
+  # Logging
+  logging:
+    level:
+      root: INFO
+      org.springframework.web: DEBUG
+    file:
+      name: /home/ubuntu/app/spring_application.log
