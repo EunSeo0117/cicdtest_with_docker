@@ -29,7 +29,6 @@ jobs:
       uses: gradle/gradle-build-action@v2
       with:
         working-directory: cicd
-        gradle-executable: cicd/gradlew
         arguments: build -x test
 
 
