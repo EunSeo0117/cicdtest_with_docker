@@ -67,7 +67,7 @@ jobs:
         script: |
           export TAG=${{ steps.timestamp.outputs.tag }}
           export DOCKER_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}
-          cd /app
+          cd ~/app
           docker-compose pull
           docker-compose down
           docker-compose up -d
