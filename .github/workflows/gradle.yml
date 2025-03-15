@@ -27,7 +27,7 @@ jobs:
     - name: Build with Gradle(최적화 모드)
       uses: gradle/gradle-build-action@v2
       with:
-        gradle-wrapper: ./cicd/gradlew  # gradlew 경로를 명시적으로 지정
+        gradle-executable: ./cicd/gradlew  # gradlew 경로 지정
         arguments: build -x test
 
     - name: Set up Docker Buildx
