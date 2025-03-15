@@ -28,8 +28,7 @@ jobs:
     - name: Build with Gradle(최적화 모드)
       uses: gradle/gradle-build-action@v2
       with:
-        working-directory: cicd
-        gradle-executable: cicd/gradlew
+        build-root-directory: cicd
         arguments: build -x test
 
 
