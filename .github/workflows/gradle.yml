@@ -22,7 +22,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Gradle Wrapper 실행권한 추가
-      run: chmod +x gradlew
+      run: chmod +x ./cicd/gradlew
 
     - name: Build with Gradle(최적화 모드)
       uses: gradle/gradle-build-action@v2
