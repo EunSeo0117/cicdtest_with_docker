@@ -51,9 +51,7 @@ jobs:
         context: .
         file: cicd/Dockerfile.dev
         push: true
-        tag: |
-          ${{ secrets.DOCKER_HUB_USERNAME }}/itdatesthub:${{ steps.timestamp.outputs.tag }}
-          ${{secrets.DOCKER_HUB_USERNAME }}/itdatesthub:latest
+        tag: "${{ secrets.DOCKER_HUB_USERNAME }}/itdatesthub:${{ steps.timestamp.outputs.tag }},${{secrets.DOCKER_HUB_USERNAME }}/itdatesthub:latest"
 
     - name: 서버에 접속후 배포
       uses: appleboy/ssh-action@master
