@@ -63,6 +63,7 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
+        debug: true
         script: |
           export TAG=${{ steps.timestamp.outputs.tag }}
           export DOCKER_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}
