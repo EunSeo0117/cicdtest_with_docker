@@ -1,8 +1,5 @@
 ### Production Server Profile ###
 spring:
-  profiles:
-    active: prod
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${mysql_prod_url}

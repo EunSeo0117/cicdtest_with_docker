@@ -1,8 +1,5 @@
 ### Develop Server Profile ###
 spring:
-  profiles:
-    active: dev
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${mysql_dev_url}
