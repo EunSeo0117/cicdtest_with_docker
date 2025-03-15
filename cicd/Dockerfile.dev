@@ -2,6 +2,6 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY build/libs/*.jar test-dev.jar
+COPY cicd/build/libs/*.jar test-dev.jar
 
 ENTRYPOINT ["java", "-Dspring.profiles.active=dev", "-jar", "test-dev.jar"]
