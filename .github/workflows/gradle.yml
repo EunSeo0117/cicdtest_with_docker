@@ -43,7 +43,7 @@ jobs:
 
     - name: timestamp 생성
       id: timestamp
-      run: echo "tag=$(date + '%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+      run: echo "tag=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
 
     - name: 도커이미지 build & push
       uses: docker/build-push-action@v5
