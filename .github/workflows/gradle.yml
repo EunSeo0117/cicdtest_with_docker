@@ -45,7 +45,6 @@ jobs:
       id: timestamp
       run: |
         tag=$(date +'%Y%m%d%H%M%S')
-        echo "tag=$tag"  # 생성된 tag를 출력
         echo "tag=$tag" >> $GITHUB_OUTPUT  # GITHUB_OUTPUT에 tag 값 저장
 
     - name: 도커이미지 build & push
@@ -54,7 +53,7 @@ jobs:
         context: .
         file: cicd/Dockerfile.dev
         push: true
-        tag: |
+        tags: |
           ${{ secrets.DOCKER_HUB_USERNAME }}/itdatesthub:${{ steps.timestamp.outputs.tag }}
           ${{secrets.DOCKER_HUB_USERNAME }}/itdatesthub:latest
 
